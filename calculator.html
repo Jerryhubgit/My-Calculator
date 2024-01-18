@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border;
+            outline: none;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            place-items: center;
+            background: linear-gradient(45deg, blue, purple);
+            display: grid;
+        }
+        .calculator{
+            padding: 20px;
+            box-shadow: 0 0 30px rgba(0,0,0,.5);
+            border-radius: 10px;
+        }
+        .display-screen{
+            height: 100px;
+            display: flex;
+            align-items: flex-end;
+            margin: 10px 0 ;
+            justify-content: flex-end;
+            overflow-y: hidden;
+            background: ;
+        }
+        .display-screen input {
+            width: 240px;
+            font-size: 40px;
+            text-align: end;
+            background: transparent;
+            border: none;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        button{
+            width: 50px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            border: none;
+            margin: 5px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        button#equal {
+            color: blue;
+            height: 120px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <div class="calculator">
+            <div class="theme-toggler">
+                <article></article>
+            </div>
+            <div class="display-screen">
+                <input type="text">
+            </div>
+            <div class="button">
+                <table>
+                    <tr>
+                        <td><button class="clear">C</button></td>
+                        <td><button class="operators">&times</button></td>
+                        <td><button class="operators">&divide</button></td>
+                        <td><button class="backspace"><</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="numbers">7</button></td>
+                        <td><button class="numbers">8</button></td>
+                        <td><button class="numbers">9</button></td>
+                        <td><button class="operators">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="numbers">4</button></td>
+                        <td><button class="numbers">5</button></td>
+                        <td><button class="numbers">6</button></td>
+                        <td><button class="operators">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="numbers">1</button></td>
+                        <td><button class="numbers">2</button></td>
+                        <td><button class="numbers">3</button></td>
+                        <td rowspan="2"><button id="equal">=</button></td>
+                    </tr>
+                    <tr>
+                        
+                        <td><button class="numbers">0</button></td>
+                        <td><button class="numbers">(</button></td>
+                        <td><button class="numbers">)</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="calculator.js"></script>
+</body>
+</html>
